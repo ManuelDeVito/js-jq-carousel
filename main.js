@@ -17,13 +17,13 @@ $(document).ready(function() {
             $('.slides :first-child').addClass('active');
         }
 
-        var circles_corrente = $('i.active')
-        circles_corrente.removeClass('active');
+        var circles_corrente = $('.circles i.fas')
+        circles_corrente.removeClass('fas').addClass('far');
 
         if (circles_corrente.next('i').length) {
-            circles_corrente.next('i').addClass('active');
+            circles_corrente.next('i').addClass('fas').removeClass('far');
         } else {
-            $('.circles :first-child').addClass('active');
+            $('.circles :first-child').addClass('fas').removeClass('far');
         }
     });
 
@@ -37,6 +37,15 @@ $(document).ready(function() {
             img_corrente.prev('img').addClass('active')
         } else {
             $('.slides img:last-of-type').addClass('active');
+        }
+
+        var circles_corrente = $('.circles i.fas')
+        circles_corrente.removeClass('fas').addClass('far');
+
+        if (circles_corrente.prev('i').length) {
+            circles_corrente.prev('i').addClass('fas').removeClass('far');
+        } else {
+            $('.circles :last-of-type').addClass('fas').removeClass('far');
         }
     });
 });
