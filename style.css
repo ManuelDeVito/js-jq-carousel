@@ -7,7 +7,7 @@
 #wrapper {
     width: 1400px;
     height: 800px;
-    margin: 50px 200px;
+    margin: 50px;
     float: left;
 }
 
@@ -35,7 +35,7 @@
     height: 100%;
     background-color: black;
     float: left;
-
+    position: relative;
 }
 
 .slides img {
@@ -47,4 +47,15 @@
 
 .slides img.active {
     display: block;
+}
+
+.circles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.circles i {
+    color: white;
 }
